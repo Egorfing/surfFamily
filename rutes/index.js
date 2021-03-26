@@ -14,7 +14,7 @@ router.get('/', async (req, res)=>{
 // const day = await Day.findOne({day: "2021-03-28"}).populate('cars');
 const days = await Day.find();
 // days.forEach(async (el) => await el.populate('cars'));
-console.log(days);
+// console.log(days);
 // days[1].populate('cars');
 // console.log('hhhhhhh',days[1]);
 const dayCars = []
@@ -33,7 +33,7 @@ for (let i = 0; i < days.length; i++) {
   
 }
 
-console.log(dayCars);
+// console.log(dayCars);
 
   res.render('index',{sesion, dayCars})
 })

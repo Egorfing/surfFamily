@@ -17,7 +17,8 @@ router.post('/',async (req,res, next)=>{
           const user =  await User.create({
             login,
             email,
-            password: await bcrypt.hash(password, salt)
+            password: await bcrypt.hash(password, salt),
+            carTrip: []
           });
           req.session.user=user
           res.redirect(`/`)
