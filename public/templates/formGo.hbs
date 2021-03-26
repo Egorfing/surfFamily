@@ -1,0 +1,19 @@
+<form id="formGo" method="POST" action="/go">
+<div class="form-floating" >
+<input name="dayNow" type="text" class="form-control" value="{{this}}" id="date">
+      <label for="date">Дата</label>
+</div>
+<div class="form-floating">
+<input name="time" type="time" class="form-control" id="time">
+      <label for="time">Время выезда</label>
+</div>
+<div class="form-floating" >
+<input name="carSeat" type="text" class="form-control" id="carSeat">
+      <label for="carSeat">Количество мест в машине</label>
+</div>
+<div class="form-floating">
+  <input name="location" type="text" class="form-control" id="location">
+      <label for="location">Место сбора</label>
+</div>
+ <button class="w-100 btn btn-lg btn-primary" style="margin-top: 20px;" type="submit">Сохранить</button>     
+</form>
