@@ -1,53 +1,31 @@
-<div
-    data-windywidget="map"
-    data-thememode="white"
-    data-spotid="423989"
-    data-appid="8f0a5910bfb118ae2636353784bfe0cf"
-    data-newwindbar="true"
-    data-spots="true">
+<div data-windywidget="map" data-thememode="white" data-spotid="423989" data-appid="8f0a5910bfb118ae2636353784bfe0cf"
+  data-newwindbar="true" data-spots="true">
 </div>
-
-{{!-- {{#if dayCars}}
-<h1>Добраться на спот в ближайшие дни:</h1>
-<div style="display: flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap; margin:20px 300px; padding: 50px">
- {{#each dayCars}}
-<div style="margin: 0 20px; font-size:20px; font-weight:600">{{this.date}}</div>
-<div  style="display: flex;;border-radius: 20px; padding: 50px; justify-content: space-around;">
-  {{#each this.cars}}
-    <div class="divDay" >
-      <div>Время выезда: <p>{{this.time}}</p></div>
-      <div>Место сбора: <p>{{this.location}}</p></div>
-      <div>Количество мест: <p>{{this.seat}}</p></div>
-      <button class="w-100 btn btn-lg btn-primary">присоединиться</button>
-    </div>
-  {{/each}}
-</div>
-{{/each}} 
-</div>
-{{/if}}
-<button class="button btn btn-primary" style="height: 60px; font-size:20px">Смотреть прогноз в виде таблицы</button>
-<section class="forecast"></section> --}}
 
 {{#if dayCars}}
 <h3 style="margin: 100px 0 0 400px;">Добраться на спот в ближайшие дни:</h3>
-<div style="display: flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap; margin:20px 300px; padding: 50px; border-left: 3px solid black;">
- {{#each dayCars}}
-<div  style="display: flex;border-radius: 20px; padding: 50px; justify-content: space-around;">
-<div style=" font-size:20px; font-weight:600">{{this.date}}</div>
-  {{#each this.cars}}
-  {{#if this.free}}
-    <div class="divDay" >
+<div
+  style="display: flex; flex-direction:row; align-items:flex-start; flex-wrap:wrap; margin:20px 300px; padding: 50px; border-left: 3px solid black;">
+  {{#each dayCars}}
+  <div style="display: flex;border-radius: 20px; padding: 50px; justify-content: space-around;">
+    <div style=" font-size:20px; font-weight:600">{{this.date}}</div>
+    {{#each this.cars}}
+    {{#if this.free}}
+    <div class="divDay">
       <form id="goPass" method="POST" action="/go/pass">
         <div class="form-floating">
-          <input name="time" type="text" class="form-control" id="timeGo" placeholder="Login" value="{{this.time}}" disabled>
+          <input name="time" type="text" class="form-control" id="timeGo" placeholder="Login" value="{{this.time}}"
+            disabled>
           <label for="timeGo">Время выезда</label>
         </div>
         <div class="form-floating">
-          <input name="location" type="text" class="form-control" id="locGo" placeholder="Login" value="{{this.location}}" disabled>
+          <input name="location" type="text" class="form-control" id="locGo" placeholder="Login"
+            value="{{this.location}}" disabled>
           <label for="locGo">Место сбора</label>
         </div>
         <div class="form-floating">
-          <input name="seats" type="text" class="form-control" id="seats" placeholder="Login" value="{{this.free}}" disabled>
+          <input name="seats" type="text" class="form-control" id="seats" placeholder="Login" value="{{this.free}}"
+            disabled>
           <label for="seats">Количество свободных мест</label>
         </div>
         <input type="hidden" name="id" value="{{this._id}}">
@@ -55,9 +33,9 @@
       </form>
     </div>
     {{/if}}
+    {{/each}}
+  </div>
   {{/each}}
-</div>
-{{/each}} 
 </div>
 {{/if}}
 <button class="button btn btn-primary" style="height: 60px; font-size:20px">Смотреть прогноз в виде таблицы</button>

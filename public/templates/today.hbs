@@ -1,35 +1,35 @@
 <table>
   <tr>
     <th class="themed-grid-col">час</th>
-  {{#each time}}
-     <td class="themed-grid-col">{{this}}</td>
-  {{/each}}
-  </tr>  
+    {{#each time}}
+    <td class="themed-grid-col">{{this}}</td>
+    {{/each}}
+  </tr>
   <tr>
     <th class="themed-grid-col">температура воздуха, C</th>
-  {{#each temp}}
-     <td class="themed-grid-col">{{this}}</td>
-  {{/each}}
+    {{#each temp}}
+    <td class="themed-grid-col">{{this}}</td>
+    {{/each}}
   </tr>
   <tr>
     <th class="themed-grid-col">направление ветра</th>
-  {{#each windDir}}
-     <td class="themed-grid-col">{{this}}</td>
-  {{/each}}
+    {{#each windDir}}
+    <td class="themed-grid-col">{{this}}</td>
+    {{/each}}
   </tr>
   <tr>
     <th class="themed-grid-col">сила ветра, м/с</th>
-  {{#each wind}}
-  
-     <td class="themed-grid-col" style="background-color:{{this.color}};">{{this.speed}}</td>
-     
-  {{/each}}
+    {{#each wind}}
+
+    <td class="themed-grid-col" style="background-color:{{this.color}};">{{this.speed}}</td>
+
+    {{/each}}
   </tr>
   <tr>
     <th class="themed-grid-col">облочность, %</th>
-  {{#each cloud}}
-     <td class="themed-grid-col">{{this}}</td>
-  {{/each}}
+    {{#each cloud}}
+    <td class="themed-grid-col">{{this}}</td>
+    {{/each}}
   </tr>
 </table>
 {{#if time1}}

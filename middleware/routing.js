@@ -1,4 +1,4 @@
-module.exports =(app) =>{
+module.exports = (app) => {
   const indexRouter = require('../rutes/index')
   const loginRouter = require('../rutes/login')
   const signUpRouter = require('../rutes/signUp')

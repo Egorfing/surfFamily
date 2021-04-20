@@ -5,9 +5,9 @@ module.exports = function (app) {
   const session = require('express-session')
   const path = require('path')
   const FileStore = require('session-file-store')(session)
-  const {cookiesCleaner} = require('./auth')
+  const { cookiesCleaner } = require('./auth')
   const dbConnection = require('./bd')
-dbConnection()
+  dbConnection()
   app.use(morgan('dev'))
 
   app.use(express.urlencoded({ extended: true }))
@@ -27,7 +27,7 @@ dbConnection()
       }
     })
   )
-  
+
   app.use(cookiesCleaner)
 
   app.use(express.static(path.join(__dirname, '..', 'public')))

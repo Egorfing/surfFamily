@@ -1,7 +1,6 @@
 .themed-grid-col {
   padding-top: .75rem;
   padding-bottom: .75rem;
-  /* background-color: rgba(86, 61, 124, .15); */
   border: 1px solid rgba(86, 61, 124, .2);
   text-align: center;
 }
@@ -9,11 +8,8 @@
 table{
   border: 1px solid black;
   background-color: #60B9CE;
-  /* background-color: rgb(185, 92, 30); */
 }
 section{
-  /* margin: 50px 200px; */
-  /* margin-right: auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +30,6 @@ margin-top: 10px;
 }
 
 .divDay{
-  /* border: 1px solid black;  */
   display:flex;  
   flex-direction:column; 
   align-items:center;

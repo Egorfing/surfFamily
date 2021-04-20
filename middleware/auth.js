@@ -1,15 +1,15 @@
-function cookiesCleaner(req,res, next){
-  if (req.cookies.user_sid && !req.session.user){
+function cookiesCleaner(req, res, next) {
+  if (req.cookies.user_sid && !req.session.user) {
     res.clearCookie('user_sid')
   }
   next()
 }
 
-const sessionChecker = (req, res, next)=>{
-  if(req.session.user){
+const sessionChecker = (req, res, next) => {
+  if (req.session.user) {
     res.render('/')
-  } else{
+  } else {
     next()
   }
 }
-module.exports = {cookiesCleaner, sessionChecker}
+module.exports = { cookiesCleaner, sessionChecker }
